@@ -9,6 +9,7 @@ then
 else
     bluetoothctl power on
     bluetoothctl connect 08:EB:ED:B0:9D:5B
+    pacmd set-default-sink bluez_sink.08_EB_ED_B0_9D_5B.a2dp_sink
 fi
 }
 
@@ -27,7 +28,7 @@ if [ "$1" == "" ]
 then
     vpn 
     bluetooth
-    pacmd set-default-sink bluez_sink.08_EB_ED_B0_9D_5B.a2dp_sink
+    
 
 #vpn d/c
 elif [ "$1" == "-vd" ]
@@ -48,7 +49,6 @@ then
 elif [ "$1" == "-bu" ]
 then
     bluetooth
-    pacmd set-default-sink bluez_sink.08_EB_ED_B0_9D_5B.a2dp_sink
 
 #vpn and bluetooth d/c
 elif [ "$1" == "-k" ]
